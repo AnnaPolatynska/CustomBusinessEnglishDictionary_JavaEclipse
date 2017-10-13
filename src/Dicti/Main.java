@@ -12,7 +12,7 @@ public class Main extends Application{
 		@Override
 		public void start(Stage stage) throws IOException {
 			
-				Parent parent= (Parent) FXMLLoader.load(getClass().getResource("/app/view/LoginView.FXML"));
+				Parent parent= (Parent) FXMLLoader.load(getClass().getResource("/Dicti/view/LoginView.FXML"));
 				Scene scene = new Scene(parent);
 				
 				stage.setScene(scene);
