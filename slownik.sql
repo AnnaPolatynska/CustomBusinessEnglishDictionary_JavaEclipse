@@ -4,9 +4,6 @@ use slownik;
 
 
 
-select id, POL from slowka where ANG= 'fringe benefits';
-
-
 
 CREATE TABLE slowka (
      id int primary key auto_increment,
@@ -331,7 +328,8 @@ VALUES
 ('lead times','czas potrzebny na przejście całego cyklu produkcyjnego'),
 ('lease payments','opłaty wynikające z umowy leasingowej'),
 ('leasehold properties','urządzenia będące w leasingu'),
-('lender = creditor','pożyczkodawca'),
+('creditor','pożyczkodawca'),
+('lender','pożyczkodawca'),
 ('liabilities','pasywa'),
 ('liabilities','zobowiązania firmy / pasywa'),
 ('liability','odpowiedzialność zwłaszcza finansowa'),
@@ -809,3 +807,36 @@ VALUES
 ('your account is debited','twoje konto jest obciążone'),
 ('your account is overdrawn','Pańskie konto jest przekroczone')
 ;
+
+
+select id, POL from slowka where ANG= 'sikness pay';
+
+insert into slowka (ANG, POL) VALUES ('commensurate','współmierny proporcjonalny');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+
+
+
+insert into slowka (ANG, POL) VALUES ('increment','regularna podwyżka');
+insert into slowka (ANG, POL) VALUES ('accountability','odpowiedzialność za porażkę');
+insert into slowka (ANG, POL) VALUES ('commensurate','współmierny proporcjonalny');
+insert into slowka (ANG, POL) VALUES ('weighting','dodatek');
+insert into slowka (ANG, POL) VALUES ('relocation allowances','dodatek realokacyjny');
+insert into slowka (ANG, POL) VALUES ('to be laid off','być zwolnionym');
+insert into slowka (ANG, POL) VALUES ('part time employees','pracownicy czasowi');
+insert into slowka (ANG, POL) VALUES ('appraisal interviews','rozmowa oceniająca');
+insert into slowka (ANG, POL) VALUES ('off side training','szkolenia zewnętrzne');
+insert into slowka (ANG, POL) VALUES ('in house training','szkolenia wewnętrzne');
+insert into slowka (ANG, POL) VALUES ('explantory','wyjaśniający');
+insert into slowka (ANG, POL) VALUES ('in arrears','z dołu');
+insert into slowka (ANG, POL) VALUES ('in advance','z góry');
+insert into slowka (ANG, POL) VALUES ('probationary service','okres próbny');
+insert into slowka (ANG, POL) VALUES ('holiday entitlement','prawo do urlopu');
+insert into slowka (ANG, POL) VALUES ('grievance','skarga');
+insert into slowka (ANG, POL) VALUES ('date of commencement','data rozpoczęcia pracy');
+insert into slowka (ANG, POL) VALUES ('pensjon','renta');
+insert into slowka (ANG, POL) VALUES ('sikness pay','chorobowe');
+insert into slowka (ANG, POL) VALUES ('notice','wypowiedzenie');
