@@ -2,9 +2,23 @@ create database slownik;
 use slownik;
 #drop database slownik;
 
+#tabela do logowania użytkowników
+CREATE TABLE users (
+ id_user int primary key auto_increment,
+    login VARCHAR(15),
+    pass VARCHAR(15)
+    );
+INSERT INTO users
+(login, pass)
+VALUES
+('Anna', 'Anna'),
+('Kawka', 'Kawka'),
+('User', 'User'),
+('Beata', 'Beata');
 
 
 
+#tabela słownik
 CREATE TABLE slowka (
      id int primary key auto_increment,
     ANG VARCHAR(150),
