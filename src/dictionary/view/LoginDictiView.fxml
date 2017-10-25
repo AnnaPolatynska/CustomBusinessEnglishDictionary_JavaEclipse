@@ -37,7 +37,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btn_db" layoutX="49.0" layoutY="340.0" mnemonicParsing="false" onAction="#loginDBAction" prefHeight="39.0" prefWidth="220.0" style="-fx-background-color: green;" text="Zaloguj do edycji słownika" textFill="#0d0d0d">
+      <Button fx:id="btn_log" layoutX="28.0" layoutY="340.0" mnemonicParsing="false" onAction="#logDictionaryAction" prefHeight="39.0" prefWidth="241.0" style="-fx-background-color: green;" text="Zaloguj" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -50,10 +50,5 @@
       <PasswordField fx:id="pf_pass" layoutX="28.0" layoutY="255.0" onAction="#hideAction" prefHeight="31.0" prefWidth="381.0" />
       <TextField fx:id="tf_pass" disable="true" layoutX="28.0" layoutY="255.0" prefHeight="31.0" prefWidth="381.0" />
       <Button fx:id="btn_show" layoutX="439.0" layoutY="255.0" mnemonicParsing="false" onAction="#showAction" text="SHOW" />
-      <Button fx:id="btnLogQuiz" layoutX="309.0" layoutY="340.0" mnemonicParsing="false" onAction="#loginQuizAction" prefHeight="39.0" prefWidth="220.0" style="-fx-background-color: lime;" text="Zaloguj do quizu">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
