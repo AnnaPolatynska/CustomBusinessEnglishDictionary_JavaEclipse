@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.controller.EditController">
    <children>
-      <BorderPane layoutX="32.0" layoutY="80.0" prefHeight="203.0" prefWidth="776.0">
+      <BorderPane layoutX="32.0" layoutY="219.0" prefHeight="324.0" prefWidth="776.0">
          <center>
             <TableView fx:id="tbl_dictionary" prefHeight="157.0" prefWidth="776.0" BorderPane.alignment="CENTER">
                <columns>
@@ -27,8 +27,7 @@
          </center>
       </BorderPane>
       <Separator layoutX="42.0" layoutY="52.0" prefHeight="12.0" prefWidth="776.0" />
-      <Separator layoutX="42.0" layoutY="295.0" prefHeight="3.0" prefWidth="776.0" />
-      <HBox layoutX="33.0" layoutY="585.0" prefHeight="87.0" prefWidth="776.0">
+      <HBox layoutX="33.0" layoutY="556.0" prefHeight="107.0" prefWidth="776.0">
          <children>
             <Button fx:id="btn_select" mnemonicParsing="false" onAction="#btnSelectAction" prefHeight="39.0" prefWidth="159.0" style="-fx-background-color: green;" text="Select" textFill="#0d0d0d">
                <font>
@@ -44,7 +43,7 @@
             <Pane prefHeight="117.0" prefWidth="56.0" />
             <VBox prefHeight="144.0" prefWidth="146.0">
                <children>
-                  <Button fx:id="btn_insert" mnemonicParsing="false" onAction="#btnInsertAction" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: violet;" text="Insert" textFill="#111111">
+                  <Button fx:id="btn_insert" mnemonicParsing="false" onAction="#btnInsertAction" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: violet;" text="Insert" textFill="#111111">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -60,7 +59,7 @@
             <Pane prefHeight="117.0" prefWidth="55.0" />
             <VBox prefHeight="144.0" prefWidth="146.0">
                <children>
-                  <Button fx:id="btn_update" mnemonicParsing="false" onAction="#btnUpdateAction" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: grey;" text="Update" textFill="#111111">
+                  <Button fx:id="btn_update" mnemonicParsing="false" onAction="#btnUpdateAction" prefHeight="49.0" prefWidth="146.0" style="-fx-background-color: grey;" text="Update" textFill="#111111">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -77,31 +76,22 @@
       </HBox>
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="46.0" />
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="46.0" />
-      <Separator layoutX="27.0" layoutY="460.0" prefHeight="3.0" prefWidth="776.0" />
       <Label layoutX="39.0" layoutY="24.0" prefHeight="27.0" prefWidth="432.0" text="Customer Dictionary" textFill="#3b9a45">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btn_exit" layoutX="769.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnExitAction" prefHeight="40.0" prefWidth="46.0" style="-fx-background-color: red;" text="X" />
-      <Button fx:id="btn_back" layoutX="674.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="40.0" prefWidth="85.0" text="cofnij" />
-      <Label layoutX="27.0" layoutY="326.0" prefHeight="21.0" prefWidth="223.0" text="czy chodziło Ci o" textAlignment="CENTER">
+      <Button fx:id="btn_back" layoutX="730.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="40.0" prefWidth="85.0" text="cofnij" />
+      <Label layoutX="56.0" layoutY="181.0" prefHeight="21.0" prefWidth="223.0" text="czy chodziło Ci o" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TableView fx:id="tbl_find" layoutX="27.0" layoutY="347.0" onSort="#FindAction" prefHeight="102.0" prefWidth="776.0">
-         <columns>
-            <TableColumn fx:id="col_id1" prefWidth="25.0" text="id" />
-            <TableColumn fx:id="col_ANG1" prefWidth="336.0" style="background: red;" text="Angielski zwrot" />
-            <TableColumn fx:id="col_POL1" prefWidth="414.0" text="polskie tłumaczenie" />
-         </columns>
-      </TableView>
-      <Label layoutX="296.0" layoutY="298.0" prefHeight="21.0" prefWidth="223.0" text="WYSZUKIWARKA ZWROTÓW" textAlignment="CENTER">
+      <Label layoutX="285.0" layoutY="64.0" prefHeight="21.0" prefWidth="223.0" text="WYSZUKIWARKA ZWROTÓW" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_findANG" layoutX="27.0" layoutY="490.0" prefHeight="25.0" prefWidth="421.0" promptText="pytania" text="Wpisz szukane angielskie słowo" />
+      <TextField fx:id="tf_findANG" layoutX="56.0" layoutY="106.0" prefHeight="31.0" prefWidth="518.0" promptText="pytania" text="Wpisz szukane angielskie słowo" />
    </children>
 </AnchorPane>

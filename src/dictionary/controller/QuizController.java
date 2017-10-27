@@ -1,41 +1,58 @@
 package dictionary.controller;
 
-	import javafx.event.ActionEvent;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-	import javafx.scene.control.Button;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
-	public class QuizController {
+public class QuizController {
 
-	    @FXML
-	    private Button bt_goToDictionary;
+    @FXML
+    private TextField tf_question;
 
-	    @FXML
-	    private Button bt_goToQuiz;
+    @FXML
+    private RadioButton rb_A;
 
-	    @FXML
-	    private Button btn_exit;
+    @FXML
+    private ToggleGroup grupa1;
 
-	    @FXML
-	    private Button btn_back;
+    @FXML
+    private RadioButton rb_B;
 
-	    @FXML
-	    void GoToDictionaryAction(ActionEvent event) {
+    @FXML
+    private RadioButton rb_C;
 
-	    }
+    @FXML
+    private TextField tf_A;
 
-	    @FXML
-	    void GoToQuizAction(ActionEvent event) {
+    @FXML
+    private TextField tf_B;
 
-	    }
+    @FXML
+    private TextField tf_C;
 
-	    @FXML
-	    void btnBackAction(ActionEvent event) {
+    @FXML
+    private Button bt_back;
 
-	    }
+    @FXML
+    private Button bt_next;
 
-	    @FXML
-	    void btnExitAction(ActionEvent event) {
+    @FXML
+    private TextField tf_question1;
 
-	    }
+    @FXML
+    private TextField tf_question11;
+
+    @FXML
+    void BackAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void NextAction(ActionEvent event) {
+
+    }
 
 }

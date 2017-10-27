@@ -11,10 +11,10 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	@ Override
 	public void start(Stage stage) throws Exception{
-		Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/dictionary/view/LoginDictiView.fxml")); //œcie¿ka dostêpu
+		Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/dictionary/view/StartView.fxml")); //œcie¿ka dostêpu
 		Scene scene= new Scene (parent);
 		stage.setScene(scene);
-		stage.setTitle("Logowanie do s³ownika");// nazwa okna
+		stage.setTitle("strona g³ówna");// nazwa okna
 		stage.show();
 		
 	}

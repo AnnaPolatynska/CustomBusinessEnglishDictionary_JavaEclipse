@@ -32,17 +32,17 @@
       </VBox>
       <VBox layoutX="22.0" layoutY="348.0" prefHeight="133.0" prefWidth="504.0">
          <children>
-            <TextField fx:id="tf_A" prefHeight="45.0" prefWidth="101.0" text="Odp. A" />
-            <TextField fx:id="tf_B" prefHeight="45.0" prefWidth="99.0" text="Odp. B" />
-            <TextField fx:id="tf_C" prefHeight="41.0" prefWidth="103.0" text="Odp. C" />
+            <TextField fx:id="tf_A" prefHeight="45.0" prefWidth="101.0" promptText="Odp. A" />
+            <TextField fx:id="tf_B" prefHeight="45.0" prefWidth="99.0" promptText="Odp. B" />
+            <TextField fx:id="tf_C" prefHeight="41.0" prefWidth="103.0" promptText="Odp. C" />
          </children>
       </VBox>
       <HBox layoutX="16.0" layoutY="595.0" prefHeight="49.0" prefWidth="575.0">
          <children>
             <Label prefHeight="101.0" prefWidth="52.0" />
-            <Button fx:id="bt_prev" mnemonicParsing="false" onAction="#prev" prefHeight="100.0" prefWidth="297.0" text="Back" />
+            <Button fx:id="bt_back" mnemonicParsing="false" onAction="#BackAction" prefHeight="100.0" prefWidth="297.0" text="Back" />
             <Label prefHeight="101.0" prefWidth="52.0" />
-            <Button fx:id="bt_next" mnemonicParsing="false" onAction="#next" prefHeight="100.0" prefWidth="289.0" text="Next" />
+            <Button fx:id="bt_next" mnemonicParsing="false" onAction="#NextAction" prefHeight="100.0" prefWidth="289.0" text="Next" />
             <Label prefHeight="101.0" prefWidth="52.0" />
          </children>
       </HBox>
@@ -58,7 +58,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btn_exit" layoutX="501.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnExitAction" prefHeight="40.0" prefWidth="85.0" text="Exit" />
       <TextField fx:id="tf_question1" layoutX="366.0" layoutY="516.0" prefHeight="47.0" prefWidth="65.0" promptText="good" />
       <TextField fx:id="tf_question11" layoutX="160.0" layoutY="516.0" prefHeight="47.0" prefWidth="78.0" promptText="bed" />
    </children>
