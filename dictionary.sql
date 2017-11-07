@@ -17,14 +17,14 @@ VALUES
 
 
 
-#tabela słownik
-CREATE TABLE slowka (
+#tabela ze słownictwem
+CREATE TABLE vocabulary (
      id int primary key auto_increment,
-    ANG VARCHAR(150),
-    POL VARCHAR(150)
+    ang VARCHAR(150),
+    pol VARCHAR(150)
    );
 	
-INSERT INTO slowka
+INSERT INTO vocabulary
 	(ANG, POL)
 VALUES
 ('a bank transfer','przelew bankowy'),
@@ -838,7 +838,45 @@ VALUES
 ('date of commencement','data rozpoczęcia pracy'),
 ('pensjon','renta'),
 ('sikness pay','chorobowe'),
-('notice','wypowiedzenie');
+('notice','wypowiedzenie'),
+('commentsurate', 'współmierny'),
+('employee stock options', 'opcje na akcje dla pracowników'),
+('business expense reimbursements', 'zwroty kosztów działalności'),
+('an annual pay increment', 'roczny przyrost płac'),
+('salarypackage', 'pakiet płac'),
+('exceptionally skilled', 'wyjątkowo utalentowani'),
+('exceedingly skilled', 'niezmiernie utalentowany'),
+('markendly skilled', 'bardzo utalentowany'),
+('ensure better results', 'zapewnić lepsze wyniki'),
+('meet sales target', 'osiągnąć cel sprzedaży'),
+('exceed sales target', 'przekroczyć cel sprzedaży'),
+('acquire new clients', 'pozyskać nowych klientów'),
+('build relationships with clients', 'zbudować realacje z klientem'),
+('improve team morale', 'poprawić morale załogi'),
+('steady progress', 'stały postęp'),
+('feasibility study', 'studium wykonalności'),
+('swift progress', 'szybki postęp'),
+('assess', 'oszacować'),
+('assess progress', 'oceniać postęp'),
+('hinder progress', 'utrudniać postęp'),
+('impede progress', 'hamować postęp'),
+('evaluate progress', 'oceniać postęp'),
+('gauge progress', 'zmierzyć postęp'),
+('hamper progress', 'hamować postęp'),
+('dead-end job', 'praca będąca ślepą uliczką, bez persektyw'),
+('staff appraisal', 'ocena pracowników'),
+('remuneration package', 'pakiet wynagrodzeń'),
+('take-home pay', 'płaca netto'),
+('paid in arrears', 'zapłacone z dołu'),
+('recognized qualification in sth', 'uznana kwalifikacja w czymś'),
+('considerable experience in sth', 'znaczne doświadczenie w czymś'),
+('first-hand experience', 'doświadczenie z pierwszej ręki'),
+('hands-on experience', 'praktyczne doświadczenie'),
+('thorough knowledge of sth', 'dokładna znajomość czegoś'),
+('working knowledge', 'praktyczna wiedza'),
+('marketable skills', 'umiejętności rynkowe'),
+('exceed initial target', 'przekroczyć ustalony target'),
+('schedule', 'rozpiska, rozkład');
 
 
 #select id, POL from slowka where ANG= 'sikness pay';
