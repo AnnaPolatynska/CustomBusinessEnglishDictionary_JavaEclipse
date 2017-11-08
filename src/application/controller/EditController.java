@@ -5,13 +5,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import application.database.DBConnector;
 import application.model.EditTableModel;
-import application.model.TableModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -84,7 +81,7 @@ public class EditController {
     	stageInfo.show();
     	}
 
-    
+//wybór s³ówka z bazy danych SELECT
     @FXML
     void btnSelectAction(MouseEvent event) throws SQLException, ClassNotFoundException {
     	Connection conn = (Connection) db.Connection();
@@ -93,12 +90,13 @@ public class EditController {
     	while(rs.next()){
 	    	data.add(new EditTableModel(rs.getInt(1),rs.getString(2), rs.getString(3)));
 	    	}
-	    	col_id.setCellValueFactory(new PropertyValueFactory<EditTableModel,Integer>("id"));
-	    	col_ANG.setCellValueFactory(new PropertyValueFactory<EditTableModel,String>("ang"));
-	    	col_POL.setCellValueFactory(new PropertyValueFactory<EditTableModel,String>("pol"));
-	    	btn_insert_commit.setDisable(false);
+	    	col_id.setCellValueFactory(new PropertyValueFactory<EditTableModel, Integer>("id"));
+	    	col_ANG.setCellValueFactory(new PropertyValueFactory<EditTableModel, String>("ang"));
+	    	col_POL.setCellValueFactory(new PropertyValueFactory<EditTableModel, String>("pol"));
+	    	tbl_dictionary.setItems(null);
+	    	tbl_dictionary.setItems(data);
     }
-    
+//wykasowanie s³ówka z bazy danych DELETE
     @FXML
     void btnDeleteAction(MouseEvent event) throws ClassNotFoundException, SQLException{
     	Connection conn = db.Connection();
@@ -119,12 +117,10 @@ public class EditController {
 
     @FXML
     void btnInsertAction(MouseEvent event) {
-    	btn_update_commit.setDisable(true);
-        tf_ANG.setDisable(false);
-        tf_POL.setDisable(false);
+    	
         }
         
-
+//Modyfikacja s³ówka z bazy danych UPDATE
     @FXML
     void btnInsertCommitAction(MouseEvent event) throws ClassNotFoundException, SQLException {
     	Connection conn = db.Connection();
@@ -138,9 +134,6 @@ public class EditController {
        		PreparedStatement ps = conn.prepareStatement(sql);
         	ps.executeUpdate();
         	btnSelectAction(event);
-        	btn_update_commit.setDisable(false);
-        	tf_ANG.setDisable(true);
-        	tf_POL.setDisable(true);
         	}
         }
         	
