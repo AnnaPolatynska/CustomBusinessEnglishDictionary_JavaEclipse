@@ -120,7 +120,7 @@ public class EditController {
     	
         }
         
-//Modyfikacja s³ówka z bazy danych UPDATE
+//Dopisanie s³ówka z bazy danych INSERT
     @FXML
     void btnInsertCommitAction(MouseEvent event) throws ClassNotFoundException, SQLException {
     	Connection conn = db.Connection();
@@ -130,28 +130,42 @@ public class EditController {
     		ale.setTitle("Error");
     		ale.showAndWait();
     	}else{
-    		String sql = "INSERT INTO vocabulary (ANG, POL) VALUES ('"+tf_ANG.getText()+"', '"+tf_POL.getText()+"');";
+    		String sql = "insert into vocabulary (ang, pol) values ('"+tf_ANG.getText()+"', '"+tf_POL.getText()+"');";
        		PreparedStatement ps = conn.prepareStatement(sql);
         	ps.executeUpdate();
         	btnSelectAction(event);
         	}
-        }
+    }
+    
+    
+      
+ // Modyfikacja s³ówka z bazy danych UPDATE
+    @FXML
+    void btnUpdateAction(MouseEvent event) {
+    	try{
+    		tf_ANG.setText(tbl_dictionary.getSelectionModel().getSelectedItem().getAng());
+    		tf_POL.setText(tbl_dictionary.getSelectionModel().getSelectedItem().getPol());
+    		}catch(NullPointerException e){
+    			Alert ale= new Alert(AlertType.INFORMATION);
+    			ale.setContentText("zaznacz rekord,który chcesz zmodyfikowaæ");
+        		ale.setHeaderText("Error");
+        		ale.setTitle("Error");
+        		ale.showAndWait();
+        		}
+    	}
+// Zapis modyfikacji s³ówka z bazy danych UPDATE COMMIT
+    @FXML
+    void btnUpdateCommitAction(MouseEvent event) throws ClassNotFoundException, SQLException {
+    	Connection conn = db.Connection();
+    	int id_update = tbl_dictionary.getSelectionModel().getSelectedItem().getId();
+    	String sql = "update vocabulary set ang='"+tf_ANG.getText()+"', pol='"+tf_POL.getText()+"' where id="+ id_update+";";
+    	PreparedStatement ps = conn.prepareStatement(sql);
+    	ps.executeUpdate();
+    	btnSelectAction(event);
         	
-       
-       
-        
-        @FXML
-        void btnUpdateAction(MouseEvent event) {
-
-        }
-
-        @FXML
-        void btnUpdateCommitAction(MouseEvent event) {
-
         }
         @FXML
         void initialize() {
         	db = new DBConnector();
         	}
- 	    
  	}
